@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="header"> Your Shopping Cart</div>
+    <div class="cart fa fa-shopping-cart"></div>
+    <div class="product" *ngFor="let product of products">
+        <product
+              [product]="product"
+              (edit)="editProduct(product)"
+              (remove)="removeProduct($event)">
+        </product>
+    </div>
+    <div class="modal-container">
+        <overlay *ngIf="isOpen"
+            [selectedProduct]="selectedProducts"
+            (isClose)="closeModal($event)">
+        </overlay>
+    </div>
+    <span> Need Help or have questions </span>
+    <span > <label for="hhh">ENTER PERMOTION CODE OR GIFT CODE</label> <input type="text">
+    </span>
+    <span> Call customer care service at 1-800-55-55555</span>
+    <span> Chat with one of ours speaclist</span>
+    <span> Subtotal {{getSum()}}</span>
+    <span> Permotion code JF10 applied</span>
+    <span> see exchange or return policy</span>
+</div>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="/">
+        <title>Shopping Place Site</title>
+        <script src="node_modules/core-js/client/shim.min.js"></script>
+        <script src="node_modules/zone.js/dist/zone.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="config.js"></script>
+        <link rel="stylesheet" src="">
+        <script>
+            System.import("app-module").catch(function(err) {
+                console.log(err);
+            })
+        </script>
+    </head>
+    <body>
+        <my-app-comp></my-app-comp>
+    </body>
+</html>

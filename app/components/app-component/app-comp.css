@@ -1,0 +1,21 @@
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.modal-container {
+    position: absolute;
+}
+
+.header {
+    color: black;
+    font-size: 35px;
+    padding-bottom: 75px;
+}
+
+.cart {
+    float: right;
+    margin-top: -26px
+}
+
+

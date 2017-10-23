@@ -1,0 +1,26 @@
+<div class="row product-outer-container">
+    <div class="column product-image"
+        [ngStyle]="{'background-image': 'url(images/T' + product.p_id +'.jpg)'}">
+    </div>
+    <div class="column product-info">
+        <div class="row variation product-name">
+            <div>{{product.p_name}} {{product.p_variation}}</div>
+            <div> Style #: {{product.p_style}} </div>
+            <div> Colour: {{product.p_selected_color.name}} </div>
+        </div>
+        <div class="row product-operations">
+            <button type="button" (click)="editProduct(product)"> Edit</button>
+            <button type="button" (click)="removeProduct(product)"> X Remove</button>
+            <button type="button" (click)="saveLater(product)"> Save for Later</button>
+        </div>
+    </div>
+    <div class="column variation product-size">
+        Size {{product.p_selected_size.code}}
+    </div>
+    <div class="column product-quntity">
+        Quantity {{product.p_quantity}}
+    </div>
+    <div class="column product-price">
+        Price {{ product.p_quantity * product.p_originalprice}}
+    </div>
+</div>

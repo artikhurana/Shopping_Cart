@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es2015", "dom" ],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "baseUrl": "./",
+  "paths": {
+    "@arti/components/overlay/*": [
+      "components/overlay/*"
+    ],
+    "@arti/components/product/*": [
+      "components/product/*"
+    ],
+     "@arti/components/app-component/*": [
+      "components/app-comp/*"
+    ]},
+  "include": [
+      "app/**/*.ts"
+  ],
+  "exclude": [
+      "node_modules"
+  ]
+}
+

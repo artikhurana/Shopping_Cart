@@ -1,0 +1,31 @@
+<div class="modal">
+    <div class="modal-content">
+            <span class="close" (click)="closeModal($event)">&times;</span>
+    <div class="column product-info">
+    <div class="row variation product-name"> {{selectedProduct.p_name}}
+        <div >{{selectedProduct.p_originalprice}}</div>
+        <div class=" row color">
+            <input type="radio" name="colour" (click)="onColorChange($event);" value="green">{{selectedProduct.p_available_options.colors[0].name}}
+            <input type="radio" name="colour"  (click)="onColorChange($event);" value="red">{{selectedProduct.p_available_options.colors[1].name}}
+            <input type="radio" name="colour"  (click)="onColorChange($event);" value="yellow">{{selectedProduct.p_available_options.colors[2].name}}
+        </div>
+        <div class="row size">
+            <span>
+            <select name="size" (change)="onSizeChange()">
+                <option value="Size"> Size</option>
+                <option value="size0">{{selectedProduct.p_available_options.sizes[0].name}}</option>
+                <option value="size1">{{selectedProduct.p_available_options.sizes[1].name}}</option>
+                <option value="size2">{{selectedProduct.p_available_options.sizes[2].name}}</option>
+        </select>
+    </span>
+      <span> <input type="number" min="1" max="100" value="1"></span>
+    </div>
+    </div>
+    <div class="column product-image"
+        [ngStyle]="{'background-image': 'url(images/T' + selectedProduct.p_id +'.jpg)'}">
+    </div>
+    <a href="localhost:5000">See Product Details</a>
+    <div>
+        <button type="button"> Edit</button>
+    </div>
+</div>
